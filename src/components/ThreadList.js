@@ -5,7 +5,7 @@ const ThreadList = () => {
     fetch("https://railway.bulletinboard.techtrain.dev/threads")
       .then((res) => res.json())
       .then((data) => console.log(data));
-  })
+  }, []);
 }
 
 export default ThreadList;
