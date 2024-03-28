@@ -5,6 +5,8 @@ import ThreadPage from "./pages/ThreadPage";
 import CreateThreadPage from "./pages/CreateThreadPage";
 import Page404 from "./pages/Page404";
 
+import "./styles/App.css";
+
 function App() {
   return (
     <BrowserRouter>
