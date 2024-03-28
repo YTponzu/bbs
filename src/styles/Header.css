@@ -1,0 +1,21 @@
+.header {
+  background: #66D48B;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px;
+}
+
+.header--title {
+  color: #fff;
+  font-size: 40px;
+}
+
+.header--newthread-btn {
+  color: #fff;
+}
+
+.header--newthread-btn:hover {
+  color: #ddd;
+}
