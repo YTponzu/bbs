@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
@@ -9,13 +10,13 @@ const StyledHeader = styled.header`
   padding: 0 64px;
 `;
 
-const StyledHeaderTitle = styled.a`
+const StyledHeaderTitle = styled(Link)`
   text-decoration: none;
   color: #fff;
   font-size: 40px;
 `;
 
-const StyledNewThreadBtn = styled.a`
+const StyledNewThreadBtn = styled(Link)`
   color: #fff;
   &:hover {
     color: #ddd;
@@ -25,8 +26,8 @@ const StyledNewThreadBtn = styled.a`
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderTitle href=".">掲示板</StyledHeaderTitle>
-      <StyledNewThreadBtn href="create-thread">スレッドをたてる</StyledNewThreadBtn>
+      <StyledHeaderTitle to="/">掲示板</StyledHeaderTitle>
+      <StyledNewThreadBtn to="/create-thread">スレッドをたてる</StyledNewThreadBtn>
     </StyledHeader>
   )
 };

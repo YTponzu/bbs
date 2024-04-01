@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledH1 = styled.h1`
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const StyledA = styled.a`
+const StyledLink = styled(Link)`
   font-size: 24px;
   color: #666;
 
@@ -66,7 +66,7 @@ const CreateThreadPage = () => {
       <StyledH1>スレッド新規作成</StyledH1>
       <StyledInput type="text" placeholder="スレッドタイトル" value={title} onChange={changeTitle} />
       <Wrapper>
-        <StyledA href=".">Topに戻る</StyledA>
+        <StyledLink to="/">Topに戻る</StyledLink>
         <StyledButton>作成</StyledButton>
       </Wrapper>
     </div>

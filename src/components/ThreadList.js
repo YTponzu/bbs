@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledThreadList = styled.div`
@@ -25,7 +26,7 @@ const StyledLi = styled.li`
   }
 `;
 
-const StyledA = styled.a`
+const StyledLink = styled(Link)`
   color: #333;
   text-decoration: none;
 `;
@@ -45,7 +46,7 @@ const ThreadList = () => {
         {threads.map((thread) => {
           return (
             <StyledLi key={thread.id}>
-              <StyledA href={`/thread/${thread.id}`}>{thread.title}</StyledA>
+              <StyledLink to={`/thread/${thread.id}`}>{thread.title}</StyledLink>
             </StyledLi>
           );
         })}
