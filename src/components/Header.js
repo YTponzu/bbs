@@ -17,7 +17,9 @@ const StyledHeaderTitle = styled.a`
 
 const StyledNewThreadBtn = styled.a`
   color: #fff;
-  hover: { color: #ddd; }
+  &:hover {
+    color: #ddd;
+  }
 `;
 
 const Header = () => {
