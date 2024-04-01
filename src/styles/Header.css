@@ -8,6 +8,7 @@
 }
 
 .header--title {
+  text-decoration: none;
   color: #fff;
   font-size: 40px;
 }
