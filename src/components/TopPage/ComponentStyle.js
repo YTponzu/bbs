@@ -13,6 +13,13 @@ export const StyledUl = styled.ul`
 `;
 
 export const StyledLi = styled.li`
+`;
+
+export const StyledLink = styled(Link)`
+  color: #333;
+  text-decoration: none;
+
+  display: block;
   background-color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
@@ -23,9 +30,4 @@ export const StyledLi = styled.li`
   &:hover {
     background-color: #ddd;
   }
-`;
-
-export const StyledLink = styled(Link)`
-  color: #333;
-  text-decoration: none;
 `;
