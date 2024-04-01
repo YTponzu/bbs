@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../styles/ThreadList.css";
 
 const ThreadList = () => {
   const [threads, setThreads] = useState([]);
@@ -10,15 +11,17 @@ const ThreadList = () => {
   }, []);
 
   return (
-    <ul>
-      {threads.map((thread) => {
-        return (
-          <li key={thread.id}>
-            <a href={`/thread/${thread.id}`}>{thread.title}</a>
-          </li>
-        );
-      })}
-    </ul>
+    <div className="threadlist">
+      <ul className="threadlist--ul">
+        {threads.map((thread) => {
+          return (
+            <li key={thread.id}>
+              <a href={`/thread/${thread.id}`}>{thread.title}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 
