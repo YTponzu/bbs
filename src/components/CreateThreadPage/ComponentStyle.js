@@ -1,15 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const StyledH1 = styled.h1`
-  width: 80%;
-  max-width: 800px;
-  margin: 32px auto;
-  padding: 0 1rem;
-  font-size: 40px;
-  font-weight: 400;
-`;
-
 export const StyledInput = styled.input`
   display: block;
   width: 80%;

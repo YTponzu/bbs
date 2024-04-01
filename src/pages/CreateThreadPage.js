@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { StyledH1, Wrapper, StyledLink, StyledButton } from "../components/CreateThreadPage/ComponentStyle";
+import { Wrapper, StyledLink } from "../components/CreateThreadPage/ComponentStyle";
+import Title from "../components/Title";
 import Form from "../components/CreateThreadPage/Form";
 import CreateThreadButton from "../components/CreateThreadPage/CreateThreadButton";
 
@@ -13,7 +14,7 @@ const CreateThreadPage = () => {
 
   return (
     <div>
-      <StyledH1>スレッド新規作成</StyledH1>
+      <Title title="スレッド新規作成" />
       <Form placeholder="スレッドタイトル" onSubmit={createThread} title={title} setTitle={setTitle} />
       <Wrapper>
         <StyledLink to="/">Topに戻る</StyledLink>

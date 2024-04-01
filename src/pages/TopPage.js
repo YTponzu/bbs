@@ -1,9 +1,10 @@
 import ThreadList from "../components/TopPage/ThreadList";
+import Title from "../components/Title";
 
 const TopPage = () => {
   return (
     <div>
-      <h1 style={{ width: "80%", maxWidth: "800px", fontWeight: "400", margin: "32px auto", padding: "0 1rem" }}>新着スレッド</h1>
+      <Title title="新着スレッド" />
       <ThreadList />
     </div>
   );

@@ -1,7 +1,9 @@
+import Title from '../components/Title';
+
 const ThreadPage = () => {
   return (
     <div>
-      <h1>ThreadPage</h1>
+      <Title title="ThreadPage" />
     </div>
   );
 };
