@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import getThreadNameById from "../../pages/scripts/getThreadNameById";
 
-import Title from "../Title";
 import TwoDivisionsLayout from "./TwoDivisionsLayout";
 import PostsSide from "./PostsSide";
 import PostFormSide from "./PostFormSide";
 
 const Thread = () => {
+  const [title, setTitle] = useState("");
   const [posts, setPosts] = useState({});
   const { id } = useParams();
 
@@ -16,7 +17,9 @@ const Thread = () => {
       .then(data => setPosts(data));
   }, [id]);
 
-  const title = "Thread Title";
+  useEffect(() => {
+    getThreadNameById(id).then((name) => setTitle(name));
+  }, [id]);
   
   return (
     <TwoDivisionsLayout
