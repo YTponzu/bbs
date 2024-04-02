@@ -23,7 +23,7 @@ const Thread = () => {
   
   return (
     <TwoDivisionsLayout
-      children={{ left: <PostsSide title={title} posts={posts} />, right: <PostFormSide /> }}
+      children={{ left: <PostsSide title={title} posts={posts} />, right: <PostFormSide id={id} /> }}
       ratio={{ lr: 2, rr: 1 }}
     />
   );

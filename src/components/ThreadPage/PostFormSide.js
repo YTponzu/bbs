@@ -31,11 +31,32 @@ const PostBtn = styled.button`
   }
 `;
 
-const PostFormSide = () => {
+const PostFormSide = ({ id }) => {
+  const postMessage = (e) => {
+    e.preventDefault();
+
+    const message = e.target[0].value.trim();
+    if (message === "") {
+      alert("メッセージを入力してください");
+      return;
+    }
+
+    fetch(
+      `https://railway.bulletinboard.techtrain.dev/threads/${id}/posts`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ post: message })
+      }
+    ).then(() => {
+      window.location.reload();
+    });
+  };
+
   return (
-    <PostForm>
+    <PostForm onSubmit={postMessage} method="POST">
       <PostMessage placeholder="投稿しよう！" />
-      <PostBtn>投稿</PostBtn>
+      <PostBtn type="submit">投稿</PostBtn>
     </PostForm>
   );
 };
