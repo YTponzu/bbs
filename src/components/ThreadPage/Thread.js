@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import getThreadNameById from "../../pages/scripts/getThreadNameById";
+import getThreadNameById from "../../scripts/getThreadNameById";
 
 import TwoDivisionsLayout from "./TwoDivisionsLayout";
 import PostsSide from "./PostsSide";
